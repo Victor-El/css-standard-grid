@@ -1,0 +1,188 @@
+:root {
+    background-color: mediumpurple;
+    font-family: cursive;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    /*  Header styles  */
+    height: 10vh;
+}
+
+header nav {
+    background-color: cornflowerblue;
+    width: 100vw;
+    min-height: 50px;
+    max-height: 10vh;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 5px 1px black;
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+header nav ul {
+    display: flex;
+    flex-grow: 4;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header nav ul li {
+    list-style-type: none;
+    margin: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: darkmagenta;
+}
+
+#heading {
+    flex-grow: 1;
+    color: antiquewhite;
+}
+
+.dash {
+    height: 3px;
+    width: 100%;
+    background-color: antiquewhite;
+    
+}
+
+.ham {
+    width: 25px;
+    height: 25px;
+    border: 0px solid antiquewhite;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cross-ham {
+     width: 25px;
+    height: 25px;
+    border: 0px solid antiquewhite;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+/*Trans from hamburger to close */
+.cross-ham div:nth-child(2) {
+    visibility: hidden;
+}
+
+.cross-ham div:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
+}
+
+.cross-ham div:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
+}
+
+/*End*/
+main {
+    padding: 0;
+    background-color: aliceblue;
+    height: 80vh;
+    background-color: transparent;
+
+}
+#nav-bar {
+    background-color: antiquewhite;
+    z-index: 1000;
+    height: 90vh;
+    width: 50%;
+    top: 10vh;
+    right: 0px;
+    position: fixed;
+    display: none;
+}
+
+#nav-bar > ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+#nav-bar > ul a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    color: darkmagenta;
+    margin: 10px;
+}
+
+#grid {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 2fr 1fr;
+/*    grid-template-columns: repeat(2, 2fr 1fr);*/
+    grid-gap: 5px;
+/*    grid-template-rows: 2fr;*/
+/*    grid-auto-rows: 1fr;*/
+/*    grid-auto-rows: 100px;*/
+    grid-auto-rows: minmax(100px, auto);
+/*  self properties are also included for individual grid items;  */
+/*  align-content and justify-content aligns within all grid items;  */
+/*    align-items: baseline; for vertical alignment of each grid item*/ 
+/*    justify-items: start; for horinzontal alignment of each grid item*/
+}
+
+.box {
+    border: 1px solid grey;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.blue {
+    background-color: darkcyan;
+/*    grid-column: 1/3; for stretching grid item, is short hand for
+     grid-column-start and grid-column-end. Samke applies to rows.*/
+}
+
+.orange {
+    background-color: brown;
+}
+
+.red {
+    background-color: crimson;
+}
+
+.green {
+    background-color: chartreuse;
+}
+
+footer {
+    background-color: darkmagenta;
+    box-shadow: -1px -2px 3px 2px black;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        background-color: cadetblue;
+    }
+    
+    #large-nav {
+        display: none;
+    }
+    
+    #ham {
+        display: flex;
+    }
+}
